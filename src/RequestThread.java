@@ -11,7 +11,6 @@ import java.util.List;
 public class RequestThread extends Thread{
 
 	private Socket socket;
-	private BufferedReader br;
 	private PrintStream pStream;
 
 	RequestThread(Socket socket) {
@@ -24,28 +23,30 @@ public class RequestThread extends Thread{
 	@Override
 	public void run() {
 		try {
-			String string="";
-			char[] ch=new char[1];
-			int isEOF=0;
-			br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			StringBuilder string= new StringBuilder();
+//			char[] ch=new char[1];
+//			int isEOF;
+			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			pStream=new PrintStream(socket.getOutputStream());
-			finish:while(true) {
-				while(true) {
-					isEOF=br.read(ch);
-					if (isEOF==-1) {
-						break finish;
-					}
-					if (ch[0]==0) {
-						break;
-					}
-					string+=ch[0];
-				}
-				analyseCmd(string);
-				string="";
-			}
+//			finish:while(true) {
+//				while(true) {
+				    string.append(br.readLine());
+				    analyseCmd(string.toString());
+//                    string = new StringBuilder();
+//					isEOF= br.read(ch);
+//					if (isEOF==-1) {
+//						break finish;
+//					}
+//					if (ch[0]==0) {
+//						break;
+//					}
+//					string.append(ch[0]);
+//				}
+//				analyseCmd(string.toString());
+//			}
 //			Server.online_num[pid]=null;
-			Server.count--;
-			System.out.println(socket.getInetAddress().getHostAddress()+"退出");
+//			Server.count--;
+//			System.out.println(socket.getInetAddress().getHostAddress()+"退出");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -55,11 +56,9 @@ public class RequestThread extends Thread{
 	//分析并处理客户端的请求
 	private void analyseCmd(String cmd) {
 		String[] ss=cmd.split("/");
-		String result="";
+		System.out.println("请求类型： "+ss[0]);
+		String result;
 		switch (ss[0]) {
-			case "message":
-//			Server.sendMessage(ss[1],pid);
-				break;
 			case "test":
 				pStream.println("OK");
 				break;
@@ -68,10 +67,22 @@ public class RequestThread extends Thread{
 				pStream.println(result);
 				break;
 			case "sign_up":
-				sign_up(ss[1], ss[2], ss[3]);
+				result=sign_up(ss[1], ss[2], ss[3]);
+				pStream.println(result);
 				break;
-			case "find_friend":
-
+			case "get_friend_list":
+				result=get_friend_list(ss[1]);
+				System.out.println("get_friend_list: "+result);
+				pStream.println(result);
+				break;
+			case "find_user":
+				result=find_user(ss[1]);
+				System.out.println("find_user: "+result);
+				pStream.println(result);
+				break;
+			case "add_friend":
+				result=add_friend(ss[1],ss[2]);
+				pStream.println(result);
 				break;
 			default:
 				System.err.println("Bad cmd!");
@@ -98,7 +109,7 @@ public class RequestThread extends Thread{
 
 	//登录
 	private String sign_in(String num, String password) {
-		String cmd="select num,password from user_lib where num="+num;
+		String cmd="select num,password from user_lib where num="+"\""+num+"\"";
 		try {
 			ResultSet result=Server.statement.executeQuery(cmd);
 			if (result.next()) {
@@ -107,32 +118,35 @@ public class RequestThread extends Thread{
 				if (pwInLib.equals(password)) {
 					for(int i=0;i<Server.online_num.length;i++) {
 						if (Server.online_num[i]==null) {
+							System.out.println("一个用户登录，pid="+i+"  账号： "+num);
 							Server.online_num[i]=number;
 							Server.online_socket[i]=socket;
-							MessageService msgs=new MessageService(socket);
+							MessageService msgs=new MessageService(i);
 							msgs.start();
 							break;
 						}
 					}
 					return "OK";
 				}else {
-					return "eorr passwprd";
+					return "error password";
 				}
 			}else {
 				return "user not fond";
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return "unknow eorr";
+			return "unknown error";
 		}
 	}
 
 	//获取自己的好友列表
-	public String get_friend_list(String my_num) {
-		String select_friend="select user1,user2 from friend_list where user1="+my_num+" or user2="+my_num;
+	private String get_friend_list(String my_num) {
+		String select_friend="select user1,user2 from friend_list where user1=\""+my_num+"\" or user2=\""+my_num+"\"";
 		List<String> friend_num=new ArrayList<>();
-		List<String> friend_name=new ArrayList<>();
+		List<JSON> objList=new ArrayList<>();
+		JSONArray objArray=new JSONArray();
 		try {
+		    // 得到自己所有好友的账号，并储存到friend_num中
 			ResultSet resultSet=Server.statement.executeQuery(select_friend);
 			while(resultSet.next()) {
 				if (resultSet.getString("user1").equals(my_num)) {
@@ -141,37 +155,55 @@ public class RequestThread extends Thread{
 					friend_num.add(resultSet.getString("user1"));
 				}
 			}
+			// 查找对应账号的昵称，并将一个用户的信息存到一个新生成的JSON数据包中
 			for (String aFriend_num : friend_num) {
-				resultSet = Server.statement.executeQuery("select name from user_lib where num=" + aFriend_num);
-				if (resultSet.next()) {
-					friend_name.add(resultSet.getString("name"));
+				resultSet = Server.statement.executeQuery("select name from user_lib where num=\"" + aFriend_num+"\"");
+				if (resultSet.next()){
+                    JSON obj=new JSON();
+				    obj.putString("name",resultSet.getString("name"));
+                    obj.putString("num",aFriend_num);
+                    objList.add(obj);
 				}
 			}
-			return friend_name.toString();
+			// 将所有JSON数据包合并为一个JSON数组并返回
+			for (JSON obj:objList)
+			    objArray.putJson(obj);
+			return objArray.toString();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return "mysql erro";
+			return "mysql error";
 		}
 	}
 
-	//查找指定账号的用户
-	public void find_user(String obj_num) {
-
+	//指定账号查找用户
+	private String find_user(String obj_num) {
+		try {
+			ResultSet resultSet = Server.statement.executeQuery("select name from user_lib where num=\"" + obj_num+"\"");
+			if (resultSet.next()){
+//				JSON obj=new JSON();
+//				obj.putString("name",resultSet.getString("name"));
+				return resultSet.getString("name");
+			}
+			return "user not found";
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return "mysql error";
+		}
 	}
 
 	//请求添加指定用户为好友
-	public String add_friend(String my_num,String obj_num) {
+	private String add_friend(String my_num, String obj_num) {
 		try {
 			ResultSet resultSet=Server.statement.executeQuery("select num from user_lib where num="+obj_num);
 			if (resultSet.next()) {
-				Server.statement.executeQuery("insert into friend_list (user1,user2) valuse ("+"\""+my_num+"\","+"\""+obj_num+"\"");
+				Server.statement.executeQuery("insert into friend_list (user1,user2) values ("+"\""+my_num+"\","+"\""+obj_num+"\"");
 				return "add friend success";
 			}else {
 				return "user not found";
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return "mysql erro";
+			return "mysql error";
 		}
 	}
 }
