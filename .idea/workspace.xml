@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7c0faa-72b8-499b-a414-77a16e889630" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/JSON.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JSONArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DogDogServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DogDogServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/JSON-java.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DogDogServer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/DogDogServer.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/JSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/JSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/JSONArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/JSONArray.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/MessageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/RequestThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/RequestThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RequestThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +24,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="371">
+              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +76,8 @@
       <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="288">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,9 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,6 +137,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,7 +238,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -252,7 +248,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -265,6 +261,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -272,15 +269,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Server.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -769,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="288">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -800,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="371">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

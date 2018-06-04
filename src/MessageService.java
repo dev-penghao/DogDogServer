@@ -13,26 +13,39 @@ public class MessageService extends Thread{
 	}
 	@Override
 	public void run() {
-		String cmd;
+		String cmd = "";
+		char[] once_char=new char[200];
 		String[] ss;
 		try {
 			br=new BufferedReader(new InputStreamReader(Server.online_socket[mpid].getInputStream()));
-
 			while(true) {
-				if ((cmd=br.readLine())==null){
+				while (true){
+					if (br.read(once_char)!=-1){
+						cmd+=String.valueOf(once_char);
+					} else {
+						sleep(300);
+						break;
+					}
+				}
+				if (Server.online_socket[mpid].getKeepAlive()) {
 					System.out.println(Server.online_num[mpid]+"下线！");
 					Server.online_num[mpid]=null;
 					Server.online_socket[mpid]=null;
 					break;
 				}
+//				if ((cmd=br.readLine())==null){
+//					break;
+//				}
 				System.out.println("新消息： "+cmd);
 				ss=cmd.split("/");
 				int pid;
 				if ((pid=isOnline(ss[0]))!=-1) {
-					new PrintStream(Server.online_socket[pid].getOutputStream()).println(Server.online_num[mpid]+"/"+ss[1]);
+					PrintStream tem_ps=new PrintStream(Server.online_socket[pid].getOutputStream());
+					tem_ps.println(Server.online_num[mpid]+"/"+ss[1]);
+					tem_ps.close();
 				}
 			}
-		} catch (IOException e) {
+		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
 		super.run();
