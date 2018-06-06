@@ -50,17 +50,4 @@ public class Server {
 			System.err.println("登录模块故障！");
 		}
 	}
-
-	//向所有客户端发送消息
-//    public static void sendMessage(String mess,int pid){
-//		for(int i=0;i<online_num.length;i++){
-//			if (pid!=i&&online_num[i]!=null) {
-//				try {
-//					new PrintStream(online_num[i].getOutputStream()).println(mess);
-//				} catch (IOException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}
-//	}
 }

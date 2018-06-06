@@ -28,7 +28,7 @@ public class JSON {
 	@Override
 	public String toString()
 	{
-		if(obj.size()==0)return null;
+		if(obj.size()==0) return null;
 		StringBuilder json;
 		json = new StringBuilder("{");
 		for(int i=0;i<obj.size()-1;i++){

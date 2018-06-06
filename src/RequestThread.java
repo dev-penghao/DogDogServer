@@ -94,12 +94,12 @@ public class RequestThread extends Thread{
 	private String sign_up(String name, String num, String password) {
 		String cmd="insert into user_lib (name,num,password) values ("+"\""+name+"\","+"\""+num+"\","+"\""+password+"\""+")";
 		try {
-			ResultSet resultSet=Server.statement.executeQuery("select id from user_lib where num="+num);
+			ResultSet resultSet=Server.statement.executeQuery("select id from user_lib where num="+"\""+num+"\"");
 			if (resultSet.next()) {
 				return "user aleady exist";
 			}else {
-				Server.statement.executeQuery(cmd);
-				return "sign_in success";
+				Server.statement.execute(cmd);
+				return "sign_up success";
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
