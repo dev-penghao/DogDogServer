@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7c0faa-72b8-499b-a414-77a16e889630" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DogDogServer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/DogDogServer.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/JSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/JSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/JSONArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/JSONArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/MessageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/RequestThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/RequestThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RequestThread.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,10 +15,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
+            <state relative-caret-position="1176">
               <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -33,16 +27,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestThread.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RequestThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RequestThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="-48">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#383#384#0" expanded="true" />
-                <element signature="method#sign_up#0;class#RequestThread#0" />
-                <element signature="method#get_friend_list#0;class#RequestThread#0" />
                 <element signature="method#add_friend#0;class#RequestThread#0" />
               </folding>
             </state>
@@ -65,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/JSONArray.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,8 +68,8 @@
       <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="360">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,6 +112,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -137,8 +131,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,8 +235,8 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32805908" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32805908" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -253,15 +245,15 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978904" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978904" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -290,8 +282,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -344,8 +334,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -395,8 +383,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -446,8 +432,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -497,8 +481,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -521,8 +503,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -582,8 +562,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -616,8 +594,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -650,8 +626,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -684,8 +658,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -718,8 +690,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
             <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
@@ -749,7 +719,7 @@
     <entry file="file://$PROJECT_DIR$/src/JSONArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -758,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="360">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -773,26 +743,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RequestThread.java">
+    <entry file="file://$PROJECT_DIR$/src/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="1176">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="method#sign_up#0;class#RequestThread#0" />
-            <element signature="method#get_friend_list#0;class#RequestThread#0" />
-            <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/RequestThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        <state relative-caret-position="-48">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="method#add_friend#0;class#RequestThread#0" />
           </folding>
         </state>
       </provider>

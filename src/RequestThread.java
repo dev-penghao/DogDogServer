@@ -23,30 +23,9 @@ public class RequestThread extends Thread{
 	@Override
 	public void run() {
 		try {
-			StringBuilder string= new StringBuilder();
-//			char[] ch=new char[1];
-//			int isEOF;
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			pStream=new PrintStream(socket.getOutputStream());
-//			finish:while(true) {
-//				while(true) {
-				    string.append(br.readLine());
-				    analyseCmd(string.toString());
-//                    string = new StringBuilder();
-//					isEOF= br.read(ch);
-//					if (isEOF==-1) {
-//						break finish;
-//					}
-//					if (ch[0]==0) {
-//						break;
-//					}
-//					string.append(ch[0]);
-//				}
-//				analyseCmd(string.toString());
-//			}
-//			Server.online_num[pid]=null;
-//			Server.count--;
-//			System.out.println(socket.getInetAddress().getHostAddress()+"退出");
+		    analyseCmd(br.readLine());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -84,13 +63,18 @@ public class RequestThread extends Thread{
 				result=add_friend(ss[1],ss[2]);
 				pStream.println(result);
 				break;
+			case "search_user":
+				result=search_user(ss[1]);
+				pStream.println(result);
+				System.out.println("search_user: "+result);
+				break;
 			default:
 				System.err.println("Bad cmd!");
 				break;
 		}
 	}
 
-	//注册
+	// 注册
 	private String sign_up(String name, String num, String password) {
 		String cmd="insert into user_lib (name,num,password) values ("+"\""+name+"\","+"\""+num+"\","+"\""+password+"\""+")";
 		try {
@@ -98,7 +82,7 @@ public class RequestThread extends Thread{
 			if (resultSet.next()) {
 				return "user aleady exist";
 			}else {
-				Server.statement.execute(cmd);
+				Server.statement.execute(cmd);// insert不能使用executeQuery()
 				return "sign_up success";
 			}
 		} catch (SQLException e) {
@@ -107,7 +91,7 @@ public class RequestThread extends Thread{
 		}
 	}
 
-	//登录
+	// 登录
 	private String sign_in(String num, String password) {
 		String cmd="select num,password from user_lib where num="+"\""+num+"\"";
 		try {
@@ -116,6 +100,12 @@ public class RequestThread extends Thread{
 				String number=result.getString("num");
 				String pwInLib=result.getString("password");
 				if (pwInLib.equals(password)) {
+					// 该用户是否在线
+					for(int i=0;i<Server.online_num.length;i++) {
+						if (Server.online_num[i]!=null && Server.online_num[i].equals(num)){
+							return "This user had online now";
+						}
+					}					
 					for(int i=0;i<Server.online_num.length;i++) {
 						if (Server.online_num[i]==null) {
 							System.out.println("一个用户登录，pid="+i+"  账号： "+num);
@@ -190,14 +180,53 @@ public class RequestThread extends Thread{
 			return "mysql error";
 		}
 	}
+	
+	// 模糊查询
+	private String search_user(String key_word) {
+		// 这条语句长成这样：select name , num from user_lib where name like "%key_word%" or num like "%key_word%";
+		try {
+			List<JSON> objs=new ArrayList<>();
+			ResultSet resultSet=Server.statement.executeQuery("select name, num from user_lib where name like "+"\"%"+key_word+"%\""+" or "+"num like "+"\"%"+key_word+"%\"");
+			while(resultSet.next()) {
+				JSON obj=new JSON();
+				obj.putString("name", resultSet.getString("name"));
+				obj.putString("num", resultSet.getString("num"));
+				objs.add(obj);
+			}
+			if (objs.isEmpty()) {
+				return "not found any user";
+			}
+			JSONArray jArray=new JSONArray();
+			for(int i=0;i<objs.size();i++) {
+				jArray.putJson(objs.get(i));
+			}
+			return jArray.toString();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return "mysql error";
+		}
+	}
 
 	//请求添加指定用户为好友
 	private String add_friend(String my_num, String obj_num) {
 		try {
-			ResultSet resultSet=Server.statement.executeQuery("select num from user_lib where num="+obj_num);
+			if (my_num.equals(obj_num)) {
+				return "不能添加自己为好友";// 这句话的意思是：不能添加自己为好友
+			}
+			ResultSet resultSet=Server.statement.executeQuery("select num from user_lib where num="+"\""+obj_num+"\"");
 			if (resultSet.next()) {
-				Server.statement.executeQuery("insert into friend_list (user1,user2) values ("+"\""+my_num+"\","+"\""+obj_num+"\"");
-				return "add friend success";
+				resultSet=Server.statement.executeQuery("select * from friend_list where user1="+"\""+my_num+"\""+" and user2="+"\""+obj_num+"\"");
+				if (resultSet.next()) {
+					return "你们已经是好友了";// 你们已经是好友了
+				} else {
+					resultSet=Server.statement.executeQuery("select * from friend_list where user2="+"\""+my_num+"\""+" and user1="+"\""+obj_num+"\"");
+					if (resultSet.next()) {
+						return "你们已经是好友了";// 你们已经是好友了
+					} else {
+						Server.statement.execute("insert into friend_list (user1,user2) values ("+"\""+my_num+"\","+"\""+obj_num+"\")");
+						return "be friend success";						
+					}
+				}
 			}else {
 				return "user not found";
 			}
