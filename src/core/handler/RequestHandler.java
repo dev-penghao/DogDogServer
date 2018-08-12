@@ -1,3 +1,10 @@
+package core.handler;
+
+import core.MessageService;
+import core.Server;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,12 +15,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestThread extends Thread{
+public class RequestHandler implements Runnable {
 
 	private Socket socket;
 	private PrintStream pStream;
 
-	RequestThread(Socket socket) {
+	public RequestHandler(Socket socket) {
 		this.socket=socket;
 	}
 	/*
@@ -29,10 +36,9 @@ public class RequestThread extends Thread{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		super.run();
 	}
 
-	//分析并处理客户端的请求
+	// 分析并处理客户端的请求
 	private void analyseCmd(String cmd) {
 		String[] ss=cmd.split("/");
 		System.out.println("请求类型： "+ss[0]);
@@ -41,32 +47,38 @@ public class RequestThread extends Thread{
 			case "test":
 				pStream.println("OK");
 				break;
-			case "sign_in":
+			case "sign_in":// 登录
 				result = sign_in(ss[1], ss[2]);
 				pStream.println(result);
 				break;
-			case "sign_up":
+			case "sign_up":// 注册
 				result=sign_up(ss[1], ss[2], ss[3]);
 				pStream.println(result);
 				break;
-			case "get_friend_list":
+			case "get_friend_list":// 获取自己的所有好友
 				result=get_friend_list(ss[1]);
 				System.out.println("get_friend_list: "+result);
 				pStream.println(result);
 				break;
-			case "find_user":
+			case "find_user":// 查找指定用户
 				result=find_user(ss[1]);
 				System.out.println("find_user: "+result);
 				pStream.println(result);
 				break;
-			case "add_friend":
+			case "add_friend":// 将指定用户添加为好友
 				result=add_friend(ss[1],ss[2]);
 				pStream.println(result);
 				break;
-			case "search_user":
+			case "search_user":// 搜索用户
 				result=search_user(ss[1]);
 				pStream.println(result);
 				System.out.println("search_user: "+result);
+				break;
+			case "get_one_details":// 得到指定的用户的详细资料
+				break;
+			case "get_chat_record":// 获取与某人的聊天记录
+				break;
+			case "sign_off":// 注销账号
 				break;
 			default:
 				System.err.println("Bad cmd!");
@@ -78,7 +90,7 @@ public class RequestThread extends Thread{
 	private String sign_up(String name, String num, String password) {
 		String cmd="insert into user_lib (name,num,password) values ("+"\""+name+"\","+"\""+num+"\","+"\""+password+"\""+")";
 		try {
-			ResultSet resultSet=Server.statement.executeQuery("select id from user_lib where num="+"\""+num+"\"");
+			ResultSet resultSet= Server.statement.executeQuery("select id from user_lib where num="+"\""+num+"\"");
 			if (resultSet.next()) {
 				return "user aleady exist";
 			}else {
@@ -111,8 +123,8 @@ public class RequestThread extends Thread{
 							System.out.println("一个用户登录，pid="+i+"  账号： "+num);
 							Server.online_num[i]=number;
 							Server.online_socket[i]=socket;
-							MessageService msgs=new MessageService(i);
-							msgs.start();
+							Thread msgServer=new Thread(new MessageService(i));
+							msgServer.start();
 							break;
 						}
 					}
@@ -129,12 +141,11 @@ public class RequestThread extends Thread{
 		}
 	}
 
-	//获取自己的好友列表
+	// 获取自己的好友列表
 	private String get_friend_list(String my_num) {
 		String select_friend="select user1,user2 from friend_list where user1=\""+my_num+"\" or user2=\""+my_num+"\"";
 		List<String> friend_num=new ArrayList<>();
-		List<JSON> objList=new ArrayList<>();
-		JSONArray objArray=new JSONArray();
+		List<JSONObject> objList=new ArrayList<>();
 		try {
 		    // 得到自己所有好友的账号，并储存到friend_num中
 			ResultSet resultSet=Server.statement.executeQuery(select_friend);
@@ -149,28 +160,25 @@ public class RequestThread extends Thread{
 			for (String aFriend_num : friend_num) {
 				resultSet = Server.statement.executeQuery("select name from user_lib where num=\"" + aFriend_num+"\"");
 				if (resultSet.next()){
-                    JSON obj=new JSON();
-				    obj.putString("name",resultSet.getString("name"));
-                    obj.putString("num",aFriend_num);
+                    JSONObject obj=new JSONObject();
+				    obj.put("name",resultSet.getString("name"));
+                    obj.put("num",aFriend_num);
                     objList.add(obj);
 				}
 			}
-			// 将所有JSON数据包合并为一个JSON数组并返回
-			for (JSON obj:objList)
-			    objArray.putJson(obj);
-			return objArray.toString();
+			return new JSONArray(objList).toString();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return "mysql error";
 		}
 	}
 
-	//指定账号查找用户
+	// 指定账号查找用户
 	private String find_user(String obj_num) {
 		try {
 			ResultSet resultSet = Server.statement.executeQuery("select name from user_lib where num=\"" + obj_num+"\"");
 			if (resultSet.next()){
-//				JSON obj=new JSON();
+//				json.JSON obj=new json.JSON();
 //				obj.putString("name",resultSet.getString("name"));
 				return resultSet.getString("name");
 			}
@@ -185,29 +193,25 @@ public class RequestThread extends Thread{
 	private String search_user(String key_word) {
 		// 这条语句长成这样：select name , num from user_lib where name like "%key_word%" or num like "%key_word%";
 		try {
-			List<JSON> objs=new ArrayList<>();
+			List<JSONObject> objs=new ArrayList<>();
 			ResultSet resultSet=Server.statement.executeQuery("select name, num from user_lib where name like "+"\"%"+key_word+"%\""+" or "+"num like "+"\"%"+key_word+"%\"");
 			while(resultSet.next()) {
-				JSON obj=new JSON();
-				obj.putString("name", resultSet.getString("name"));
-				obj.putString("num", resultSet.getString("num"));
+				JSONObject obj=new JSONObject();
+				obj.put("name", resultSet.getString("name"));
+				obj.put("num", resultSet.getString("num"));
 				objs.add(obj);
 			}
 			if (objs.isEmpty()) {
 				return "not found any user";
 			}
-			JSONArray jArray=new JSONArray();
-			for(int i=0;i<objs.size();i++) {
-				jArray.putJson(objs.get(i));
-			}
-			return jArray.toString();
+			return new JSONArray(objs).toString();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return "mysql error";
 		}
 	}
 
-	//请求添加指定用户为好友
+	// 请求添加指定用户为好友
 	private String add_friend(String my_num, String obj_num) {
 		try {
 			if (my_num.equals(obj_num)) {
