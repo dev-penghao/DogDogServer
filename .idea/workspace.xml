@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb7c0faa-72b8-499b-a414-77a16e889630" name="Default" comment="对服务器">
-      <change afterPath="$PROJECT_DIR$/lib/JSON-java.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/MessageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/Server.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/handler/RequestHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/looper/MessageLooper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/looper/RequestLooper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/MyInputStream.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/MyTask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/looper/MessageLooper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/looper/RequestLooper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/MyInputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/Test.java" afterDir="false" />
+    <list default="true" id="31764791-a444-4c06-88fd-d981fa93435b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DogDogServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DogDogServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/JSON.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/JSONArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/MessageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/RequestThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JSON.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JSONArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/handler/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/core/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/core/handler/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/handler/RequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/core/looper/MessageLooper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/looper/MessageLooper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/core/looper/RequestLooper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/core/looper/RequestLooper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/tools/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/tools/MyInputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/MyInputStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/tools/MyTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/MyTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DogDogServer/tools/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DogDogServer/tools/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/handler/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/handler/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/looper/MessageLooper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/looper/MessageLooper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/looper/RequestLooper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/looper/RequestLooper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,48 +34,37 @@
     <session id="1519760717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
-          <entry key="project.open.time.10" value="7" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.26" value="3" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="6" />
-          <entry key="project.opened" value="28" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="28" />
-          <entry key="java" value="3907" />
-          <entry key="txt" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="3907" />
-          <entry key="PLAIN_TEXT" value="33" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages">
-        <counts>
-          <entry key="git.branch.create.new" value="1" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="4" />
-          <entry key="java" value="32" />
+          <entry key="class" value="6" />
+          <entry key="java" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="32" />
+          <entry key="CLASS" value="6" />
+          <entry key="JAVA" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="739" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="739" />
         </counts>
       </usages-collector>
     </session>
@@ -91,34 +72,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core/Server.java">
+        <entry file="file://$PROJECT_DIR$/src/tools/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="3429">
+              <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core/looper/RequestLooper.java">
+        <entry file="file://$PROJECT_DIR$/src/tools/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="810">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1053">
+              <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/core/handler/RequestHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/core/looper/RequestLooper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="675">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -126,8 +117,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="432">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tools/MyInputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,121 +138,75 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/looper/MessageLooper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tools/MyInputStream.java">
+        <entry file="file://$PROJECT_DIR$/src/core/handler/RequestHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tools/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="5751">
+              <caret line="228" column="53" selection-start-line="228" selection-start-column="53" selection-end-line="228" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>toString</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/RequestThrad.java" />
-        <option value="$PROJECT_DIR$/src/JSON.java" />
-        <option value="$PROJECT_DIR$/src/JSONArray.java" />
-        <option value="$PROJECT_DIR$/src/RequestThread.java" />
-        <option value="$PROJECT_DIR$/src/Message.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/MyOutputStream.java" />
-        <option value="$PROJECT_DIR$/src/MyInputStream.java" />
-        <option value="$PROJECT_DIR$/src/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/Server.java" />
-        <option value="$PROJECT_DIR$/src/json/JSONArray.java" />
-        <option value="$PROJECT_DIR$/src/json/JSON.java" />
-        <option value="$PROJECT_DIR$/src/core/RequestThread.java" />
-        <option value="$PROJECT_DIR$/src/core/Handler.java" />
-        <option value="$PROJECT_DIR$/src/core/Looper.java" />
-        <option value="$PROJECT_DIR$/src/core/MessageLooper.java" />
-        <option value="$PROJECT_DIR$/src/core/looper/Request.java" />
-        <option value="$PROJECT_DIR$/src/core/looper/RequestLooper.java" />
-        <option value="$PROJECT_DIR$/src/core/handler/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/tools/Test.java" />
-        <option value="$PROJECT_DIR$/src/tools/Message.java" />
         <option value="$PROJECT_DIR$/src/core/Server.java" />
+        <option value="$PROJECT_DIR$/src/tools/Test.java" />
         <option value="$PROJECT_DIR$/src/core/looper/MessageLooper.java" />
-        <option value="$PROJECT_DIR$/src/core/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/core/handler/RequestHandler.java" />
-        <option value="$PROJECT_DIR$/src/tools/MyInputStream.java" />
+        <option value="$PROJECT_DIR$/src/core/looper/RequestLooper.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="348" />
-    <option name="y" value="27" />
-    <option name="width" value="1370" />
-    <option name="height" value="1000" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Probable bugsJava</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>ConstantConditions</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+    <option name="x" value="371" />
+    <option name="width" value="1248" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DogDogServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DogDogServer" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="DogDogServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DogDogServer" type="616d4139:PackageViewModuleNode" />
+              <item name="core" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="DogDogServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DogDogServer" type="616d4139:PackageViewModuleNode" />
+              <item name="core" type="1f31426a:PackageElementNode" />
+              <item name="handler" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="DogDogServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DogDogServer" type="616d4139:PackageViewModuleNode" />
+              <item name="core" type="1f31426a:PackageElementNode" />
+              <item name="looper" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,29 +214,31 @@
               <item name="DogDogServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="DogDogServer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DogDogServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DogDogServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DogDogServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DogDogServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534080004580" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534596906067" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/JSON-java.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -297,10 +253,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Server">
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Server" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="core.Server" />
       <module name="DogDogServer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -308,27 +269,12 @@
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tools.Test" />
       <module name="DogDogServer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -339,7 +285,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -349,19 +294,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb7c0faa-72b8-499b-a414-77a16e889630" name="Default" comment="" />
-      <created>1527513913003</created>
+      <changelist id="31764791-a444-4c06-88fd-d981fa93435b" name="Default Changelist" comment="" />
+      <created>1534591080114</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1527513913003</updated>
+      <updated>1534591080114</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17155506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1404073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -369,16 +313,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32756758" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39891893" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30716723" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993174" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3279396" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32992035" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32972974" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32864866" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32992035" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -393,140 +337,59 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../JavaLab/lib/mysql-connector-java-8.0.11.jar!/com/mysql/cj/AbstractPreparedQuery.class">
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/lang/System.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2568">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="165">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.11.jar!/com/mysql/cj/jdbc/StatementImpl.class">
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/lang/ClassLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="898" selection-start-line="898" selection-end-line="898" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/io/OutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/io/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/io/InputStreamReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2614">
-          <caret line="61" column="43" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/json/JSONArray.java" />
-    <entry file="file://$PROJECT_DIR$/src/json/JSON.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/JSON-java.jar!/JSONTokener.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/JSON-java.jar!/JSONObject.java" />
-    <entry file="file://$PROJECT_DIR$/src/core/handler/MessageHandler.java" />
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="528" column="30" selection-start-line="528" selection-start-column="30" selection-end-line="528" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="4029" column="21" selection-start-line="4029" selection-start-column="21" selection-end-line="4029" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/StringCoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="684" column="56" lean-forward="true" selection-start-line="684" selection-start-column="56" selection-end-line="684" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="505" column="29" lean-forward="true" selection-start-line="505" selection-start-column="29" selection-end-line="505" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/JSON-java.jar!/org/json/JSONException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/JSON-java.jar!/org/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/JSON-java.jar!/org/json/JSONArray.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14184">
-          <caret line="640" column="18" selection-start-line="640" selection-start-column="18" selection-end-line="640" selection-end-column="18" />
+        <state relative-caret-position="171">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tools/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state relative-caret-position="3429">
+          <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/looper/RequestLooper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1053">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="432">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/MyInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -535,38 +398,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/looper/MessageLooper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/MyInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="324">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/handler/RequestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="5751">
+          <caret line="228" column="53" selection-start-line="228" selection-start-column="53" selection-end-line="228" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/looper/RequestLooper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -610,7 +457,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -634,7 +481,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>KotlinJavaRuntime</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

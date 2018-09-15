@@ -163,6 +163,7 @@ public class RequestHandler implements Runnable {
                     JSONObject obj=new JSONObject();
 				    obj.put("name",resultSet.getString("name"));
                     obj.put("num",aFriend_num);
+                    obj.put("isOnline",Server.isOnline(aFriend_num)!=-1);
                     objList.add(obj);
 				}
 			}

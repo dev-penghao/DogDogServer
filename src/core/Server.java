@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class Server {
 	// 输出流列表，记录了所有客户端的的输出流
 	public static String[] online_num = new String[MAX_ONLINE_NUM];
 	public static Socket[] online_socket = new Socket[MAX_ONLINE_NUM];
-	public static List<Message> msgQueue = new ArrayList<>();
+	public static List<Message> msgQueue = new LinkedList<>();
 
 	// JDBC 驱动名及数据库 URL
 	private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -39,9 +38,13 @@ public class Server {
 
 			statement = con.createStatement();
 		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 			System.err.println("驱动加载失败");
+			return;
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.err.println("数据库连接失败");
+			return;
 		}
 
 		Thread requestLooper=new Thread(new RequestLooper());
@@ -50,5 +53,15 @@ public class Server {
 		messageLooper.start();
 
 		System.out.println("服务器正在等待客户端的连接请求----");
+	}
+
+	// 给定一个账号，判断该用户是否在线。如果在线则返回该用户的pid,否则返回-1
+	public static int isOnline(String num) {
+		for(int i=0;i<Server.online_num.length;i++) {
+			if (num.equals(Server.online_num[i])) {
+				return i;
+			}
+		}
+		return -1;
 	}
 }
